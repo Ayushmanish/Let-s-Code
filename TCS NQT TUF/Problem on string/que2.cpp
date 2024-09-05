@@ -41,10 +41,12 @@ int main()
     string str;
     getline(cin,str);
     int i,size;
-    for(i=0;i<str.length();i++){
+    for(i=0;i<str.length();){
         if(tolower(str[i])=='a' || tolower(str[i])=='e' || tolower(str[i])=='i' || tolower(str[i])=='o' || tolower(str[i])=='u'){
             str=str.substr(0,i)+str.substr(i+1);
         }
+        else
+        i++;
     }
     cout<<"\nthe updated string is: "<<str;
 }
